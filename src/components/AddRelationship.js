@@ -34,7 +34,7 @@ const AddRelationship = () => {
     useEffect(() => {
         if (node1Label) {
             axios
-                .get(`https://chmury-back.azurewebsites.net//get_node_names/${node1Label}`)
+                .get(`https://chmury-back.azurewebsites.net/get_node_names/${node1Label}`)
                 .then((res) => setNode1Names(res.data.names))
                 .catch((error) => {
                     console.error("Error fetching node 1 names:", error);
@@ -49,7 +49,7 @@ const AddRelationship = () => {
     useEffect(() => {
         if (node2Label) {
             axios
-                .get(`https://chmury-back.azurewebsites.net//get_node_names/${node2Label}`)
+                .get(`https://chmury-back.azurewebsites.net/get_node_names/${node2Label}`)
                 .then((res) => setNode2Names(res.data.names))
                 .catch((error) => {
                     console.error("Error fetching node 2 names:", error);
@@ -64,7 +64,7 @@ const AddRelationship = () => {
         e.preventDefault();
         try {
             const relationship = relationshipType === "Custom" ? customRelationship : relationshipType;
-            const res = await axios.post("https://chmury-back.azurewebsites.net//add_relationship", {
+            const res = await axios.post("https://chmury-back.azurewebsites.net/add_relationship", {
                 node1_label: node1Label,
                 node1_properties: { name: node1Name },
                 node2_label: node2Label,
