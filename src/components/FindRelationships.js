@@ -15,7 +15,7 @@ const FindRelationships = () => {
     useEffect(() => {
         if (nodeLabel) {
             axios
-                .get(`https://chmury-back.azurewebsites.net//get_node_names/${nodeLabel}`)
+                .get(`https://chmury-back.azurewebsites.net/get_node_names/${nodeLabel}`)
                 .then((res) => setNodeNames(res.data.names))
                 .catch((error) => {
                     console.error("Error fetching node names:", error);
@@ -28,7 +28,7 @@ const FindRelationships = () => {
 
     const handleSearch = async () => {
         try {
-            const res = await axios.post("https://chmury-back.azurewebsites.net//get_outgoing_relationships", {
+            const res = await axios.post("https://chmury-back.azurewebsites.net/get_outgoing_relationships", {
                 node_label: nodeLabel,
                 node_name: nodeName,
             });
