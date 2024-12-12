@@ -23,7 +23,6 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd ./witcher-app
           sudo chmod +x node_modules/.bin/react-scripts
           npm install
           CI=false npm run build --if-present
