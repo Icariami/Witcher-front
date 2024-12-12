@@ -10,7 +10,7 @@ const GetNodes = () => {
 
     const handleFetchNodes = async () => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/get_nodes/${label}`);
+            const res = await axios.get(`https://chmury-back.azurewebsites.net//get_nodes/${label}`);
             setNodes(res.data.nodes || []);
             setResponseMessage("");
         } catch (error) {
