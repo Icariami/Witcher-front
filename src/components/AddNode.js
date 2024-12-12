@@ -40,7 +40,7 @@ const AddNode = () => {
         }
 
         try {
-            const res = await axios.post("http://127.0.0.1:8000/add_node", {
+            const res = await axios.post("https://chmury-back.azurewebsites.net/add_node", {
                 label,
                 properties: formData,
             });
