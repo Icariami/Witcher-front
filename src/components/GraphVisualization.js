@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import cytoscape from "cytoscape";
 
 const GraphVisualization = ({ graphData }) => {
     console.log("DEBUG: Graph Data in GraphVisualization:", graphData); // Log the data
